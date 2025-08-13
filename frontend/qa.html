@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClauseWise – Question &amp; Answer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <aside class="sidebar" role="navigation" aria-label="Primary">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">CW</div>
+      <div class="brand-text">
+        <a class="brand-name" href="index.html">ClauseWise</a>
+        <span class="brand-sub">Legal Document Analyzer</span>
+      </div>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebar-nav">
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+    <nav id="sidebar-nav" class="nav-links">
+      <a href="index.html#home" class="nav-link">Home</a>
+      <a href="index.html#features" class="nav-link">Features</a>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    <section class="section feature-header reveal">
+      <h1 class="title">Question &amp; Answer</h1>
+      <p class="subtitle">Ask natural-language questions and get quick insights.</p>
+      <div class="file-info">
+        <span>Document: <strong id="current-file-name">None selected</strong></span>
+        <label class="btn secondary" for="feature-document">Upload different document</label>
+        <input id="feature-document" type="file" class="visually-hidden" accept=".pdf,.doc,.docx,.txt" />
+        <a href="index.html" class="btn link">Back to Home</a>
+      </div>
+    </section>
+
+    <section class="section qa-section reveal" aria-label="Ask questions and see answers">
+      <div class="qa-input-row">
+        <input id="qa-question" type="text" class="input" placeholder="Type your question about the document..." aria-label="Question" />
+        <button class="btn primary" id="btn-ask">Ask</button>
+      </div>
+      <div class="qa-answers" id="qa-answers" aria-live="polite">
+        <div class="muted">No questions asked yet.</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
