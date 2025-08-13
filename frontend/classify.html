@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClauseWise – Classify Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <aside class="sidebar" role="navigation" aria-label="Primary">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">CW</div>
+      <div class="brand-text">
+        <a class="brand-name" href="index.html">ClauseWise</a>
+        <span class="brand-sub">Legal Document Analyzer</span>
+      </div>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebar-nav">
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+    <nav id="sidebar-nav" class="nav-links">
+      <a href="index.html#home" class="nav-link">Home</a>
+      <a href="index.html#features" class="nav-link">Features</a>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    <section class="section feature-header reveal">
+      <h1 class="title">Classify Document</h1>
+      <p class="subtitle">Automatically categorize legal documents by type and intent.</p>
+      <div class="file-info">
+        <span>Document: <strong id="current-file-name">None selected</strong></span>
+        <label class="btn secondary" for="feature-document">Upload different document</label>
+        <input id="feature-document" type="file" class="visually-hidden" accept=".pdf,.doc,.docx,.txt" />
+        <a href="index.html" class="btn link">Back to Home</a>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="controls">
+        <button class="btn primary" id="btn-run-classify">Run Classification</button>
+        <button class="btn ghost" id="btn-clear-classify">Clear</button>
+      </div>
+
+      <div class="cards results-grid" id="classification-results" aria-live="polite">
+        <article class="card muted">
+          <h3 class="card-title">No results</h3>
+          <p class="card-desc">Run classification to see predicted document types.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

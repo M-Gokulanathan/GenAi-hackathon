@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>ClauseWise – Legal Document Analyzer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#home">Skip to content</a>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" role="navigation" aria-label="Primary">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">CW</div>
+      <div class="brand-text">
+        <span class="brand-name">ClauseWise</span>
+        <span class="brand-sub">Legal Document Analyzer</span>
+      </div>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebar-nav">
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+    <nav id="sidebar-nav" class="nav-links">
+      <a href="#home" class="nav-link" data-scroll>Home</a>
+      <a href="#features" class="nav-link" data-scroll>Features</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <!-- Hero / Upload Section -->
+    <section id="home" class="section hero reveal" aria-labelledby="hero-title">
+      <header>
+        <h1 id="hero-title" class="title">ClauseWise – AI-Powered Legal Document Analyzer</h1>
+        <p class="subtitle">Upload your legal document and choose a feature to analyze it</p>
+      </header>
+
+      <form id="upload-form" class="upload" aria-label="Upload Legal Document">
+        <label for="document" class="input-label">Choose document (PDF, DOCX, TXT)</label>
+        <input id="document" name="document" type="file" accept=".pdf,.doc,.docx,.txt" aria-describedby="upload-help" />
+        <div id="upload-help" class="help-text">Your file is not uploaded to a server in this demo. We only store the filename locally for display.</div>
+      </form>
+
+      <div id="post-upload" class="post-upload hidden" aria-live="polite">
+        <p class="prompt">Select the feature you want to perform on the uploaded document</p>
+        <div class="feature-buttons">
+          <button class="btn primary" data-feature="simplify" aria-label="Simplify Clauses">Simplify Clauses</button>
+          <button class="btn primary" data-feature="extract_entities" aria-label="Extract Entities">Extract Entities</button>
+          <button class="btn primary" data-feature="classify" aria-label="Classify Document">Classify Document</button>
+          <button class="btn primary" data-feature="qa" aria-label="Question and Answer">Question &amp; Answer</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section features reveal" aria-labelledby="features-title">
+      <h2 id="features-title" class="section-title">Powerful Features</h2>
+      <div class="cards">
+        <article class="card" tabindex="0" role="button" aria-label="Simplify Clauses feature" data-nav="simplify.html">
+          <div class="icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4H20V6H4V4ZM4 9H20V11H4V9ZM4 14H14V16H4V14ZM4 19H14V21H4V19Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Simplify Clauses</h3>
+          <p class="card-desc">Transform complex legal clauses into clear, plain language.</p>
+          <span class="card-cta">Open →</span>
+        </article>
+
+        <article class="card" tabindex="0" role="button" aria-label="Extract Entities feature" data-nav="extract_entities.html">
+          <div class="icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 3H3V10H10V3ZM21 3H14V10H21V3ZM21 14H14V21H21V14ZM10 14H3V21H10V14Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Extract Entities</h3>
+          <p class="card-desc">Identify parties, dates, amounts, and key legal references.</p>
+          <span class="card-cta">Open →</span>
+        </article>
+
+        <article class="card" tabindex="0" role="button" aria-label="Classify Document feature" data-nav="classify.html">
+          <div class="icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 4H21V6H3V4ZM3 9H21V11H3V9ZM3 14H14V16H3V14ZM3 19H14V21H3V19Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Classify Document</h3>
+          <p class="card-desc">Automatically categorize legal documents by type and intent.</p>
+          <span class="card-cta">Open →</span>
+        </article>
+
+        <article class="card" tabindex="0" role="button" aria-label="Q and A feature" data-nav="qa.html">
+          <div class="icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3C7.03 3 3 6.58 3 11C3 13.39 4.23 15.54 6.19 17.02L5 21L9.24 19.11C10.12 19.36 11.04 19.5 12 19.5C16.97 19.5 21 15.92 21 11.5C21 7.08 16.97 3 12 3Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Question &amp; Answer</h3>
+          <p class="card-desc">Ask natural-language questions and get quick insights.</p>
+          <span class="card-cta">Open →</span>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer reveal" role="contentinfo">
+      <p>© <span id="year"></span> ClauseWise. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
